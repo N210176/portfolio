@@ -1,0 +1,420 @@
+/* Global Styles */
+:root {
+    /* Primary Colors */
+    --primary-color: #00ff9d; /* Bright green, commonly used in blockchain/crypto */
+    --primary-dark: #00cc7d;
+    --primary-light: #33ffb1;
+    
+    /* Secondary Colors */
+    --secondary-color: #2a2a2a; /* Dark gray for backgrounds */
+    --secondary-light: #3a3a3a;
+    --secondary-dark: #1a1a1a;
+    
+    /* Accent Colors */
+    --accent-color: #ff3e3e; /* Red for security alerts/notifications */
+    --accent-light: #ff6b6b;
+    --accent-dark: #cc3232;
+    
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --text-muted: #808080;
+    
+    /* Background Colors */
+    --dark-bg: #121212;
+    --light-bg: #ffffff;
+    --card-bg: #2a2a2a;
+    --card-bg-light: #f8f9fa;
+    
+    /* Border Colors */
+    --border-color: #333333;
+    --border-light: #dee2e6;
+    
+    /* Status Colors */
+    --success-color: #00ff9d;
+    --warning-color: #ffb800;
+    --danger-color: #ff3e3e;
+    --info-color: #00b8ff;
+    
+    /* Transitions */
+    --transition: all 0.3s ease;
+}
+
+/* Dark Mode Styles */
+[data-bs-theme="dark"] {
+    --bs-body-bg: var(--dark-bg);
+    --bs-body-color: var(--text-primary);
+    --bs-primary: var(--primary-color);
+    --bs-secondary: var(--secondary-color);
+    --bs-success: var(--success-color);
+    --bs-warning: var(--warning-color);
+    --bs-danger: var(--danger-color);
+    --bs-info: var(--info-color);
+    --bs-border-color: var(--border-color);
+    --bs-card-bg: var(--card-bg);
+}
+
+/* Light Mode Styles */
+[data-bs-theme="light"] {
+    --bs-body-bg: var(--light-bg);
+    --bs-body-color: var(--secondary-dark);
+    --bs-primary: var(--primary-color);
+    --bs-secondary: var(--secondary-color);
+    --bs-success: var(--success-color);
+    --bs-warning: var(--warning-color);
+    --bs-danger: var(--danger-color);
+    --bs-info: var(--info-color);
+    --bs-border-color: var(--border-light);
+    --bs-card-bg: var(--card-bg-light);
+}
+
+/* General Styles */
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-family: 'Inter', sans-serif;
+    transition: var(--transition);
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--secondary-dark) !important;
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+[data-bs-theme="light"] .navbar {
+    background-color: var(--light-bg) !important;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    transition: var(--transition);
+}
+
+[data-bs-theme="light"] .nav-link {
+    color: var(--secondary-color) !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--secondary-dark);
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+[data-bs-theme="light"] .hero-section {
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.carousel-item {
+    background-color: var(--secondary-dark);
+    transition: var(--transition);
+}
+
+[data-bs-theme="light"] .carousel-item {
+    background-color: var(--light-bg);
+}
+
+.carousel-caption {
+    background-color: rgba(18, 18, 18, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    transition: var(--transition);
+}
+
+[data-bs-theme="light"] .carousel-caption {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--secondary-dark);
+}
+
+/* Cards */
+.card {
+    background-color: var(--bs-card-bg);
+    border: 1px solid var(--bs-border-color);
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.1);
+}
+
+.card-title {
+    color: var(--primary-color);
+}
+
+.card-text {
+    color: var(--bs-body-color);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secondary-dark);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secondary-dark);
+    transform: translateY(-2px);
+}
+
+/* Progress Bars */
+.progress {
+    background-color: var(--secondary-dark);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+[data-bs-theme="light"] .progress {
+    background-color: var(--border-light);
+    border: 1px solid var(--border-light);
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+    color: var(--secondary-dark);
+}
+
+/* Skills Section */
+.skill-item {
+    background-color: var(--bs-card-bg);
+    border: 1px solid var(--bs-border-color);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+/* Contact Form */
+.form-control {
+    background-color: var(--bs-card-bg);
+    border: 1px solid var(--bs-border-color);
+    color: var(--bs-body-color);
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    background-color: var(--bs-card-bg);
+    border-color: var(--primary-color);
+    color: var(--bs-body-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 255, 157, 0.25);
+}
+
+/* Footer */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer .btn-outline-light {
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .btn-outline-light:hover {
+    background-color: #fff;
+    color: #212529;
+    transform: translateY(-2px);
+}
+
+footer .btn-outline-light i {
+    font-size: 1rem;
+}
+
+/* Dark mode styles */
+[data-bs-theme="dark"] footer {
+    background-color: #212529 !important;
+}
+
+[data-bs-theme="dark"] footer .btn-outline-light:hover {
+    background-color: #fff;
+    color: #212529;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    footer .social-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+/* Social Links */
+.social-links a {
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+[data-bs-theme="light"] .social-links a {
+    color: var(--secondary-color);
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px var(--primary-color);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--primary-color);
+    }
+    100% {
+        box-shadow: 0 0 5px var(--primary-color);
+    }
+}
+
+/* Security-themed Elements */
+.security-badge {
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.blockchain-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 0;
+    }
+    
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-dark);
+}
+
+[data-bs-theme="light"] ::-webkit-scrollbar-track {
+    background: var(--light-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Loading Animation */
+.loading {
+    border: 3px solid var(--secondary-dark);
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: var(--bs-card-bg);
+    color: var(--bs-body-color);
+    border: 1px solid var(--bs-border-color);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--bs-border-color);
+}
+
+/* Badge Styles */
+.badge {
+    padding: 0.5em 0.8em;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.badge:hover {
+    transform: translateY(-2px);
+}
+
+/* Section Headers */
+.section-header {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
